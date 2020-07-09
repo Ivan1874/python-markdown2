@@ -1961,7 +1961,7 @@ class Markdown(object):
     _strong_re = re.compile(r"(\*\*|__)(?=\S)(.+?[*_]*)(?<=\S)\1", re.S)
     _em_re = re.compile(r"(\*|_)(?=\S)(.+?)(?<=\S)\1", re.S)
     _code_friendly_strong_re = re.compile(r"\*\*(?=\S)(.+?[*_]*)(?<=\S)\*\*", re.S)
-    _code_friendly_em_re = re.compile(r"\*(?=\S)(.+?)(?<=\S)\*", re.S)
+    _code_friendly_em_re = re.compile(r"__(?=\S)(.+?)(?<=\S)__", re.S)
     def _do_italics_and_bold(self, text):
         # <strong> must go first:
         if "code-friendly" in self.extras:
